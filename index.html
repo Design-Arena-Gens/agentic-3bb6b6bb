@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tom & Jerry Chase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hud">
+        <h1>Tom &amp; Jerry Chase</h1>
+        <div class="hud__stats">
+          <span class="hud__label">Score:</span>
+          <span id="score" class="hud__value">0</span>
+          <span class="hud__label">Cheese:</span>
+          <span id="cheese" class="hud__value">0</span>
+          <span class="hud__label">High Score:</span>
+          <span id="high-score" class="hud__value">0</span>
+        </div>
+      </header>
+
+      <section class="game">
+        <canvas id="game" width="960" height="540"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <h2 id="overlay-title">Tom caught Jerry!</h2>
+          <p id="overlay-subtitle">Press space to play again.</p>
+          <button id="restart" class="btn">Restart</button>
+        </div>
+      </section>
+
+      <section class="controls">
+        <h2>How to Play</h2>
+        <ul>
+          <li>Move Jerry with arrow keys or WASD.</li>
+          <li>Collect cheese to slow Tom down.</li>
+          <li>Dash (Shift) for a burst of speed, but it costs a cheese.</li>
+          <li>Stay away from Tom for as long as you can!</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
